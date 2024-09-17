@@ -4,7 +4,10 @@
     <div class="grid 2xl:grid-cols-4 gap-6 mb-6">
 
         <div class="2xl:col-span-3">
-            <div class="grid xl:grid-cols-4 md:grid-cols-2 gap-6 mb-6">
+
+            <!--
+                <div class="grid xl:grid-cols-4 md:grid-cols-2 gap-6 mb-6">
+
                 <div class="card">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
@@ -35,7 +38,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="flex items-end">
                             <div class="flex-grow">
                                 <p class="text-[13px] text-gray-400 dark:text-gray-500 font-semibold"><i class="mgc_alarm_2_line"></i> 4 Hrs ago</p>
@@ -190,6 +192,8 @@
                     </div>
                 </div>
             </div>
+            -->
+
 
             <div class="grid lg:grid-cols-3 gap-6">
                 <div class="col-span-1">

@@ -9,17 +9,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 
-
 /**
  * Class User
- * 
+ *
  * @property int $iduser
- * @property string $username
+ * @property string $user_name
  * @property string $user_password
- * @property int|null $user_idemp
+ * @property int $user_idemp
  * @property string $user_e
- * 
- * @property Employee|null $employee
+ *
+ * @property Employee $employee
  * @property Collection|AfLog[] $af_logs
  * @property Collection|Syslog[] $syslogs
  * @property Collection|Rol[] $rols
@@ -41,7 +40,7 @@ class User extends Model
 	];
 
 	protected $fillable = [
-		'username',
+		'user_name',
 		'user_password',
 		'user_idemp',
 		'user_e'

@@ -1,0 +1,8 @@
+.logo {
+    height: 230px;
+}
+.logo-gobierno {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
