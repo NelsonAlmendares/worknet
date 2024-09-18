@@ -9,7 +9,7 @@
                 <div class="grid xl:grid-cols-4 md:grid-cols-2 gap-6 mb-6">
 
                 <div class="card">
-                    <div class="p-6">
+                    <div class="p-6">   
                         <div class="flex justify-between items-start">
                             <div>
                                 <h4 class="text-base mb-1 text-gray-600 dark:text-gray-400">Project Dashboard</h4>
