@@ -4,29 +4,21 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoutingController;
 use App\Http\Controllers\AuthController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+// Ruta de login para mostrar la vista de login
+Route::get('/login', [AuthController::class, 'Login'])->name('login');
 
-Route::get('/login', function () {
-    return view('auth.login');
-})->name('login');
+// Ruta de login para procesar el formulario de login
+Route::post('/login', [AuthController::class, 'LoginPost'])->name('login.post');
 
-// Route::post('/login', [AuthController::class, 'login']);
-// Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth');
+// Ruta de logout
+Route::post('/logout', [AuthController::class, 'Logout'])->middleware('auth')->name('logout');
 
-require __DIR__ . '/auth.php';
+// Ruta de inicio o "home"
+Route::get('/home', fn() => view('index'))->name('home');
 
+// Rutas adicionales
 Route::group(['prefix' => '/'], function () {
     Route::get('', [RoutingController::class, 'index'])->name('root');
-    Route::get('/home', fn()=>view('index'))->name('home');
     Route::get('{first}/{second}/{third}', [RoutingController::class, 'thirdLevel'])->name('third');
     Route::get('{first}/{second}', [RoutingController::class, 'secondLevel'])->name('second');
     Route::get('{any}', [RoutingController::class, 'root'])->name('any');
